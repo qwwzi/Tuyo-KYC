@@ -1,0 +1,8 @@
+#!name=Tuyo KYC
+#!desc=提取Persona链接
+
+[Script]
+Tuyo KYC = type=http-response,pattern=^https:\/\/withpersona\.com\/api\/internal\/verify\/v1\/inquiries(?:\?.*)?$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/qwwzi/persona-kyc/main/PersonaKYC.js,timeout=10,enable=true
+
+[MITM]
+hostname = %APPEND% withpersona.com
