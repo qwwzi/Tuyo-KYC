@@ -1,3 +1,6 @@
+#!name=Tuyo KYC
+#!desc=提取Persona链接
+
 /*
  * Persona KYC Inquiry Link Extractor
  * Shadowrocket only
