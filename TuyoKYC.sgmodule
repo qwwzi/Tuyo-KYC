@@ -1,8 +1,8 @@
 #!name=Tuyo KYC
-#!desc=提取Sumsub KYC链接
+#!desc=提取Persona链接
 
 [Script]
-Tuyo KYC = type=http-request,pattern=^https:\/\/in\.sumsub\.com\/websdk\/p\/[A-Za-z0-9_-]+(?:[?#].*)?$,script-path=https://raw.githubusercontent.com/qwwzi/Tuyo-KYC/main/PersonaKYC.js,timeout=10,enable=true
+Tuyo KYC = type=http-response,pattern=^https:\/\/withpersona\.com\/api\/internal\/verify\/v1\/inquiries(?:\?.*)?$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/qwwzi/Tuyo-KYC/main/PersonaKYC.js,timeout=10,enable=true
 
 [MITM]
-hostname = %APPEND% in.sumsub.com
+hostname = %APPEND% withpersona.com
